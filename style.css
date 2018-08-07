@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Shrikhand');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-webkit-user-select: none; /* Safari 3.1+ */
+	-moz-user-select: none; /* Firefox 2+ */
+	-ms-user-select: none; /* IE 10+ */
+	user-select: none; /* Standard syntax */
+}
+
+body {
+	background-color: #e0e0e0;
+}
+
+header {
+	padding: 50px;
+	text-align: center;
+	background-color: #fff;
+	font-family: monospace;
+}
+
+header>h1 {
+	font-size: 56px;
+}
+
+header>p {
+	margin-top: 20px;
+	font-size: 22px;
+}
+
+#result, #choice {
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	min-height: 20000px;
+	background-color: rgba(0,0,0,0.8);
+}
+
+#item-choice>button {
+	width: 80px;
+	height: 80px;
+	font-size: 40px;
+	margin: 50px auto;
+	border: none;
+	cursor: pointer;
+	border-radius: 100%;
+
+}
+
+#popup, #item-choice {
+	display: inherit;
+	z-index: 2000;
+	width: 400px;
+	/* height: 300px; */
+	margin: 25px auto;
+	padding: 25px;
+	background-color: #f1f1f1;
+	border-radius: 10px;
+	text-align: center;
+	letter-spacing: 10px;
+	box-shadow: 20px 20px 20px #222;
+}
+
+#popup>h1 {
+	margin: 50px 0;
+	/* line-height: 0; */
+	font-size: 22px;
+	font-family: sans-serif;
+	text-transform: uppercase;
+}
+
+#popup>button {
+	width: 100px;
+	height: 30px;
+	font-size: 20px;
+	font-family: monospace;
+	letter-spacing: 4px;
+}
+
+.score-badge {
+	/* z-index: 2500; */
+	display: inline-block;
+	position: absolute;
+	background-color: red;
+	border-radius: 10px 10px 0 0;
+	text-align: center;
+	font-size: 26px;
+	padding: 7px 0;
+	width: 150px;
+	height: 40px;
+	top: -40px;
+	/* left: 20px; */
+}
+
+#com-score {
+	right: 20px;
+	background-color: #444;
+	color: #fff;
+}
+
+#com-score::before {
+	content: "Com: ";
+}
+
+#user-score {
+	left: 20px;
+	background-color: #fff;
+	color: #444;
+}
+
+#user-score::before {
+	content: "You: ";
+}
+
+.game-board {
+	position: relative;
+	/* overflow: hidden; */
+	margin: 100px auto;
+	padding: 20px;
+	width: 400px;
+	min-height: 400px;
+	background-color: #000;
+	display: grid;
+	grid-template-columns: repeat(3, 33.33%);
+	grid-auto-rows: 120px;
+	border-radius: 10px;
+	box-shadow: 15px 15px 20px #333;
+}
+
+.game-board::after {
+	position: absolute;
+	content: "";
+	display: block;
+	width: 330px;
+	height: 330px;
+	top:35px;
+	left: 35px;
+	background-color: #a1a1a1;
+}
+
+.box {
+	z-index: 100;
+	background-color: #000;
+	margin: 2px;
+	padding: 10px;
+	color: #fafafa;
+	text-align: center;
+	font-family: 'Shrikhand', cursive;
+	font-size: 55px;
+}
